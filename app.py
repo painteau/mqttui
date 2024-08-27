@@ -144,7 +144,7 @@ def record_client_performance():
 def get_version():
     return jsonify({'version': __version__})
 
-if __name__ == '__main__':
+if __name__ == '__app__':
     if mqtt_username and mqtt_password:
         mqtt_client.username_pw_set(mqtt_username, mqtt_password)
     try:

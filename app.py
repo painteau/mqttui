@@ -22,7 +22,7 @@ def after_request(response):
     return response
 
 # MQTT setup
-mqtt_client = mqtt.Client(client_id='',
+mqtt_client = mqtt.Client(client_id='mqttui',
                          transport='tcp',
                          protocol=mqtt.MQTTv5)
 mqtt_broker = os.getenv('MQTT_BROKER', 'localhost')

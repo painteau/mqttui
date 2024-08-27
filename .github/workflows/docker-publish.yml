@@ -1,9 +1,4 @@
 name: Docker
-
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
 on:
   schedule:
     - cron: '0 10 * * 1'
@@ -80,5 +75,5 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          platforms: linux/arm/v7,linux/arm64/v8,linux/amd64
+          platforms: linux/arm64/v8,linux/amd64
 
